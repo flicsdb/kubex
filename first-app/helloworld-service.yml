@@ -4,8 +4,8 @@ metadata:
   name: helloworld-service
 spec:
   ports:
-  - port: 80
-    targetPort: nodejs-port
+  - port: 8080
+    targetPort: tomcat-port
     protocol: TCP
   selector:
     app: helloworld

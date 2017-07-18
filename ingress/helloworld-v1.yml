@@ -11,10 +11,10 @@ spec:
     spec:
       containers:
       - name: k8s-demo
-        image: wardviaene/k8s-demo:latest
+        image: zshaik/helloworld
         ports:
-        - name: nodejs-port
-          containerPort: 3000
+        - name: tomcat-port
+          containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -25,7 +25,7 @@ spec:
   ports:
   - port: 80
     nodePort: 30303
-    targetPort: 3000
+    targetPort: 8080
     protocol: TCP
     name: http
   selector:

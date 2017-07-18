@@ -11,11 +11,11 @@ spec:
     spec:
       containers:
       - name: k8s-demo
-        image: wardviaene/k8s-demo
-        command: ["node", "index-db.js"]
+        image: zshaik/helloworld:200
+        #command: ["node", "index-db.js"]
         ports:
-        - name: nodejs-port
-          containerPort: 3000
+        - name: tomcat-port
+          containerPort: 8080
         env:
           - name: MYSQL_HOST
             value: database-service

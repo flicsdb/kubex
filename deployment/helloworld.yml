@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: k8s-demo
-        image: wardviaene/k8s-demo
+        image: zshaik/helloworld:200
         ports:
-        - name: nodejs-port
-          containerPort: 3000
+        - name: tomcat-port
+          containerPort: 8080
